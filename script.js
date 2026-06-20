@@ -51,15 +51,12 @@ function next(id) {
 
     // se for resultado final, guardar e mostrar
     if (resultNames[id]) {
-        chosenResult = id;
-        document.getElementById("resultText").innerText = "Destino final: " + resultNames[id];
-        document.getElementById("finalResult").classList.add("active");
-
-        const audio = document.getElementById("bgm");
-        if (audio) {
-            audio.pause();
-            audio.currentTime = 0;
-        }
+    chosenResult = id;
+    // Mostra o texto dentro do próprio bloco
+    const resultText = document.getElementById("resultText");
+    if (resultText) {
+        resultText.innerText = "Destino final: " + resultNames[id];
+    }
     }
 }
 
